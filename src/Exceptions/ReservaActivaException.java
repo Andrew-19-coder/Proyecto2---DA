@@ -9,7 +9,7 @@ package Exceptions;
  * @author Joan
  */
 public class ReservaActivaException extends Exception {
-   public ReservaActivaException() {
+    public ReservaActivaException() {
         super("No se puede eliminar el cliente: tiene reservas activas");
     }
 
