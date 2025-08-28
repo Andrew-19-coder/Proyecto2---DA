@@ -12,7 +12,7 @@ import Gestion_Personas.Persona;
  * @author Jeshuan
  */
 public class ListaEmpleados implements List<Empleado>{
- private ArrayList<Empleado> empleados;
+   private ArrayList<Empleado> empleados;
     
     public ListaEmpleados() {
         this.empleados = new ArrayList<>();
@@ -21,10 +21,10 @@ public class ListaEmpleados implements List<Empleado>{
     public int getCantidad() {
         return empleados.size();
     }
-    
+
     @Override
     public boolean agregar(Empleado t) {
-      if(t == null) return false;
+        if(t == null) return false;
         if(buscar(t.getCedula()) != null) return false;
         if(!Persona.esMayorEdad(t.getFechaNacimiento())) return false;
         if(!Persona.validarCorreo(t.getCorreo())) return false;
@@ -51,16 +51,19 @@ public class ListaEmpleados implements List<Empleado>{
 
     @Override
     public boolean eliminar(Empleado t) {
-     return empleados.remove(t);
+        return empleados.remove(t);
     }
 
     @Override
     public Empleado buscar(Object id) {
-     if(id == null) return null;
+        if(id == null) return null;
         String cedula = String.valueOf(id);
         for(Empleado e : empleados){
             if(e.getCedula().equals(cedula)) return e;
         }
         return null;
+    }
+     public ArrayList<Empleado> getTodos() {
+        return new ArrayList<>(empleados);
     }
     }
