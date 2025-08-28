@@ -58,6 +58,7 @@ FrmBarraInferior barraInferior = new FrmBarraInferior();
        InternalVehiculo Vehiculo = new InternalVehiculo();
        Vehiculo.setList(listaVehiculos);
        DesktopPane.add(Vehiculo);
+       Vehiculo.setSize(800, 600);
         Vehiculo.setVisible(true);
        Vehiculo.setLocation(280, 100); 
     }
