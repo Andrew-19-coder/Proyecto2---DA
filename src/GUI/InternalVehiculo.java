@@ -392,7 +392,7 @@ private void cargarDatosTabla() {
             "Estadísticas del Sistema", JOptionPane.INFORMATION_MESSAGE);
     }
     
-    // NUEVO: Menú contextual (click derecho)
+   
     private void mostrarMenuContextual(java.awt.event.MouseEvent evt) {
         JPopupMenu menu = new JPopupMenu();
         
@@ -499,12 +499,13 @@ private void cargarDatosTabla() {
         setMaximizable(true);
         setResizable(true);
         setOpaque(true);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("Gestionar Vehiculo");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 184, 33));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(6, 0, 184, 33);
 
         jInternalFrame1.setClosable(true);
         jInternalFrame1.setMaximizable(true);
@@ -529,7 +530,8 @@ private void cargarDatosTabla() {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jInternalFrame1, new org.netbeans.lib.awtextra.AbsoluteConstraints(362, 273, 0, 0));
+        getContentPane().add(jInternalFrame1);
+        jInternalFrame1.setBounds(362, 273, 0, 0);
 
         tablaVehiculos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 153), new java.awt.Color(0, 0, 204), null, new java.awt.Color(0, 0, 0)));
         tablaVehiculos.setModel(new javax.swing.table.DefaultTableModel(
@@ -564,10 +566,12 @@ private void cargarDatosTabla() {
         tablaVehiculos.setSelectionForeground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(tablaVehiculos);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 39, 444, 302));
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(12, 39, 444, 302);
 
         jSeparator1.setForeground(new java.awt.Color(153, 153, 153));
-        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 347, 712, 29));
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(6, 347, 712, 29);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
@@ -662,7 +666,8 @@ private void cargarDatosTabla() {
                 .addContainerGap(60, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(485, 51, -1, 290));
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(485, 51, 213, 290);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
@@ -769,7 +774,8 @@ private void cargarDatosTabla() {
                 .addGap(14, 14, 14))
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 382, -1, -1));
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(6, 382, 714, 164);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
