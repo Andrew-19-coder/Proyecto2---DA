@@ -10,23 +10,23 @@ import java.time.Period;
  * @author Jeshuan
  */
 public class Cliente extends Persona{
-    private String licenciaConducir;
+    private Tipo_Licencia licencia;
     private LocalDate fechaExpedicion;
-    
-    public Cliente(String cedula, String nombre, LocalDate fechaNacimiento, String telefono, String correo, String licenciaConducir, LocalDate fechaExpedicion) {
+   
+    public Cliente(String cedula, String nombre, LocalDate fechaNacimiento, String telefono, String correo, Tipo_Licencia licencia, LocalDate fechaExpedicion) {
         super(cedula, nombre, fechaNacimiento, telefono, correo);
-        this.licenciaConducir = licenciaConducir;
+        this.licencia = licencia;
         this.fechaExpedicion = fechaExpedicion;
         }
+
+    public Tipo_Licencia getLicencia() {
+        return licencia;
+    }
+
+    public void setLicencia(Tipo_Licencia licencia) {
+        this.licencia = licencia;
+    }
     
-
-    public String getLicenciaConducir() {
-        return licenciaConducir;
-    }
-
-    public void setLicenciaConducir(String licenciaConducir) {
-        this.licenciaConducir = licenciaConducir;
-    }
     
     public LocalDate getFechaExpedicion() {
         return fechaExpedicion;
@@ -41,10 +41,7 @@ public class Cliente extends Persona{
        
     }
     public boolean tieneLicencia(){
-        if(licenciaConducir==null){
-            return false;
-        }
-        if(!licenciaConducir.equals(cedula)){
+        if(licencia==null){
             return false;
         }
         LocalDate fechaMayorEdad = this.fechaNacimiento.plusYears(18);
@@ -61,5 +58,4 @@ public class Cliente extends Persona{
     public void setFechaExpedicion(LocalDate fechaExpedicion) {
         this.fechaExpedicion = fechaExpedicion;
     }
-    
 }
