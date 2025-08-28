@@ -15,5 +15,5 @@ public class ReservaActivaException extends Exception {
 
     public ReservaActivaException(String nombreCliente) {
         super("No se puede eliminar el cliente " + nombreCliente + ": tiene reservas activas");
-    }  
+     }  
 }
